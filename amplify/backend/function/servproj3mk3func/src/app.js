@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
 const axios = require('axios')
+// so far dummy data works without calling axios...
 
 // declare a new express app
 const app = express()
