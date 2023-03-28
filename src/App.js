@@ -1,9 +1,10 @@
 import './App.css';
+import { Coins } from './Coins';
 
 function App() {
   return (
     <div className="App">
-      <h1>Nothing to see here, move on...</h1>
+      <Coins />
     </div>
   );
 }
