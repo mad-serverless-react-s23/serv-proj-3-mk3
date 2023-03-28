@@ -4,13 +4,13 @@ import { API } from 'aws-amplify';
 export const GithubBirth = () => {
     const [born, updateBorn] = useState([]);
 
-    const fetchBirth = async() => {
+    const fetchBorn = async() => {
         const info = await API.get('servproj3mk3', '/born');
         updateBorn(info.born);
     };
 
     useEffect(() => {
-        fetchBirth();
+        fetchBorn();
     }, []);
 
     return (
