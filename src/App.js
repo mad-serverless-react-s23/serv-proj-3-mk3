@@ -1,7 +1,7 @@
 import './App.css';
 import { Coins } from './Coins';
 import { GithubBirth } from './GithubBirth';
-// pushing axios to the function
+// pushed axios - so far the api still works
 function App() {
   return (
     <div className="App">
