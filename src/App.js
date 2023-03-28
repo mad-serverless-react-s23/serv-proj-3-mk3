@@ -1,7 +1,8 @@
 import './App.css';
 import { Coins } from './Coins';
 import { GithubBirth } from './GithubBirth';
-// Coins works as expected now...
+// merged with master and function preserved...
+// next to change the /born side...
 function App() {
   return (
     <div className="App">
@@ -11,6 +12,5 @@ function App() {
     </div>
   );
 }
-// testing of the api works
 
 export default App;
