@@ -15,6 +15,7 @@ export const Coins = () => {
 
     return (
         <>
+        <h2>Coins works?</h2>
         {
             coins.map((coin, index) => (
                 <div key={index}>
