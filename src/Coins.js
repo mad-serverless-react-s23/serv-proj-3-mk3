@@ -26,7 +26,6 @@ export const Coins = () => {
 
     return (
         <>
-            <h2>Coins works?</h2>
             <input
             onChange={e => updateInputValues('start', e.target.value)}
             placeholder="start"
@@ -50,7 +49,6 @@ export const Coins = () => {
                     </div>
                 ))
             }
-        </>
-        
+        </>        
     );
 }
