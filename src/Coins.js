@@ -5,7 +5,7 @@ export const Coins = () => {
     const [coins, updateCoins] = useState([]);
 
     const fetchCoins = async() => {
-        const data = await API.get('serveproj3mk3api', '/coins');
+        const data = await API.get('servproj3mk3api', '/coins');
         updateCoins(data.coins);
     };
 
