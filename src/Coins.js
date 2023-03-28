@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { API } from 'aws-amplify';
-
+// dummy data test successful
 export const Coins = () => {
     const [coins, updateCoins] = useState([]);
 
