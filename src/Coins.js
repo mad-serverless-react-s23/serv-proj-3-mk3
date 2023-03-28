@@ -14,6 +14,7 @@ export const Coins = () => {
     }, []);
 
     return (
+        <>
         {
             coins.map((coin, index) => (
                 <div key={index}>
@@ -22,5 +23,7 @@ export const Coins = () => {
                 </div>
             ))
         }
-    )
+        </>
+        
+    );
 }
