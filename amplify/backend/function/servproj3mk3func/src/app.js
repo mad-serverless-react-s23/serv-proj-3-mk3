@@ -31,10 +31,11 @@ app.get('/coins', function(req, res) {
 });
 
 app.get('/born', function(req, res) {
-  const born = [
-    { name: 'AuspiciousFerret', day: 'Tuesday' }
-  ]
-  res.json({born});
+  let bornUrl = `https://api.github.com/users/mysticalskeptic`;
+
+  axios.get(bornUrl).then(response => {
+    res.json({ born: response.data })
+  }).catch(err => res.json({ error: err }))
 });
 
 // Export the app object. When executing the application local this does nothing. However,
