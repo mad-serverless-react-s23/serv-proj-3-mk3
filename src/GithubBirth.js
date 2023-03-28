@@ -16,7 +16,11 @@ export const GithubBirth = () => {
     return (
         <>
             <h2>GithubBirth works?</h2>
-            <h3>{born.name} was forged on {born.day} and proceeded to alter the internet...</h3>
+            {
+                born.map(x => (
+                    <h3>{x.name} was forged on {x.day} and proceeded to alter the internet...</h3>
+                ))
+            }
         </>        
     )
 }
