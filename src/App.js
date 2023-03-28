@@ -1,7 +1,7 @@
 import './App.css';
 import { Coins } from './Coins';
 import { GithubBirth } from './GithubBirth';
-// created fifth push so I can backtrack if necessary... hopefully...
+// Coins works as expected now...
 function App() {
   return (
     <div className="App">
