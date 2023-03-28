@@ -5,7 +5,7 @@ export const GithubBirth = () => {
     const [born, updateBorn] = useState([]);
 
     const fetchBorn = async() => {
-        const data = await API.get('servproj3mk3', '/born');
+        const data = await API.get('servproj3mk3api', '/born');
         updateBorn(data.born);
     };
 
