@@ -17,6 +17,7 @@ app.use(function(req, res, next) {
 });
 
 app.get('/coins', function(req, res) {
+  let apiUrl = `https://api.coinlore.com/api/tickers?start=0&limit=10`;
   const coins = [
     { name: 'Grobnok Bloodsplinters', symbol: 'GBSP', price_usd: "1010192.22" },
     { name: 'Imperial Standard Gu', symbol: 'ISGU', price_usd: "0.00102" },
