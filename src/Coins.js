@@ -26,6 +26,7 @@ export const Coins = () => {
 
     return (
         <>
+            <h2>Want to know how badly cryptocurrency is going?</h2>
             <input
             onChange={e => updateInputValues('start', e.target.value)}
             placeholder="start"

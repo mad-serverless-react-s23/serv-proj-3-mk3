@@ -32,7 +32,6 @@ app.get('/born', function(req, res) {
 
   axios.get(bornUrl).then(response => {
     res.json({ born: response.data })
-    // console.log(response);
   }).catch(err => res.json({ error: err }))
 });
 

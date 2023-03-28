@@ -15,11 +15,13 @@ export const GithubBirth = () => {
 
     return (
         <>
-            {
-                born.map(x => (
-                    <h3>{x.name} was forged on {x.day} and proceeded to alter the internet...</h3>
-                ))
-            }
+            <h1>{born.login} was forged on {born.created_at} and proceeded to alter the internet...</h1>
+            <h2>More information about {born.login}:</h2>
+            <ul>
+                <li>Currently has {born.followers} followers</li>
+                <li>Is following {born.following} accounts</li>
+                <li>Has {born.public_repos} public repositories</li>
+            </ul>
         </>        
     )
 }
