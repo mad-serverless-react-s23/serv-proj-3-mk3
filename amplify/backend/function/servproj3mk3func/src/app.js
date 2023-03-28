@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
 const axios = require('axios')
+const { response } = require('express')
 // so far dummy data works without calling axios...
 
 // declare a new express app
@@ -18,12 +19,15 @@ app.use(function(req, res, next) {
 
 app.get('/coins', function(req, res) {
   let apiUrl = `https://api.coinlore.com/api/tickers?start=0&limit=10`;
-  const coins = [
-    { name: 'Grobnok Bloodsplinters', symbol: 'GBSP', price_usd: "1010192.22" },
-    { name: 'Imperial Standard Gu', symbol: 'ISGU', price_usd: "0.00102" },
-    { name: 'Yernz', symbol: 'YRNZ', price_usd: "2" }
-  ]
-  res.json({coins});
+  // copy/paste from textbook...
+  if (req.apiGateway && req.apiGateway.event.queryStringParameters) {
+    const { start = 0, limit = 10 } = req.apiGateway.event.queryStringParameters;
+    apiUrl = `https://api.coinlore.com/api/tickers/?start=${start}&limit=${limit}`;
+  };
+  // manual copy from book
+  axios.get(apiUrl).then(response => {
+    res.json({ coins: response.data.data })
+  }).catch(err => res.json({ error: err }));
 });
 
 app.get('/born', function(req, res) {
