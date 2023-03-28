@@ -1,14 +1,3 @@
-/*
-Copyright 2017 - 2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at
-    http://aws.amazon.com/apache2.0/
-or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and limitations under the License.
-*/
-
-
-
-
 const express = require('express')
 const bodyParser = require('body-parser')
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
@@ -30,14 +19,20 @@ app.use(function(req, res, next) {
  * Example get method *
  **********************/
 
-app.get('/item', function(req, res) {
-  // Add your code here
-  res.json({success: 'get call succeed!', url: req.url});
+app.get('/coins', function(req, res) {
+  const coins = [
+    { name: 'Grobnok Bloodsplinters', symbol: 'GBSP', price_usd: "1010192.22" },
+    { name: 'Imperial Standard Gu', symbol: 'ISGU', price_usd: "0.00102" },
+    { name: 'Yernz', symbol: 'YRNZ', price_usd: "2" }
+  ]
+  res.json({coins});
 });
 
-app.get('/item/*', function(req, res) {
-  // Add your code here
-  res.json({success: 'get call succeed!', url: req.url});
+app.get('/born', function(req, res) {
+  const born = [
+    { name: 'AuspiciousFerret', day: 'Tuesday' }
+  ]
+  res.json({born});
 });
 
 /****************************
