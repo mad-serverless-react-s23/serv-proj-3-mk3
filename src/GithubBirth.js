@@ -5,8 +5,8 @@ export const GithubBirth = () => {
     const [born, updateBorn] = useState([]);
 
     const fetchBorn = async() => {
-        const info = await API.get('servproj3mk3', '/born');
-        updateBorn(info.born);
+        const data = await API.get('servproj3mk3', '/born');
+        updateBorn(data.born);
     };
 
     useEffect(() => {
